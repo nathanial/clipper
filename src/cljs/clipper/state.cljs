@@ -7,7 +7,7 @@
 (defonce selected-page (reagent/atom nil))
 
 (defn add-page []
-    (swap! pages conj {:id (random-uuid) :name "New Page"}))
+    (swap! pages conj {:id (random-uuid) :type :blank}))
 
 (defn open-page-settings [page]
     (println "Open Page Settings" page))

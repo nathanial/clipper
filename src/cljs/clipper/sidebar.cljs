@@ -15,7 +15,7 @@
 (defn page-item [page is-selected]
     (let [class (if is-selected "page-item selected" "page-item")]
         [:div {:class class :key (:id page) :on-mouse-down #(state/select-page page)}
-        [:span {:class "page-title"} (:name page)]
+        [:span {:class "page-title"} (or (:name page) "Untitled")]
         (page-settings-btn page)]))
 
 (defn sidebar []

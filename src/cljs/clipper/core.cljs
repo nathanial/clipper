@@ -4,7 +4,8 @@
               [accountant.core :as accountant]
               [clipper.toolbar :as toolbar]
               [clipper.sidebar :as sidebar]
-              [clipper.state :as state]))
+              [clipper.state :as state]
+              [clipper.page :as cpage]))
 
 ;; -------------------------
 ;; Views
@@ -13,7 +14,8 @@
 (defn home-page []
   [:div {:class "home-page"}
     (toolbar/app-toolbar)
-    (sidebar/sidebar)])
+    (sidebar/sidebar)
+    (cpage/selected-page)])
 
 ;; -------------------------
 ;; Routes
